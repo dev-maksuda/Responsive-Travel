@@ -483,13 +483,12 @@
     }
 }
 @media (max-width: 768px) {
-    /* --- Copyright Text Alignment and Link Spacing Fix --- */
     .copyright_wrapper {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         justify-content: center !important;
-        gap: 20px !important;
+        gap: 10px !important;
     }
 
     .copyright_wrapper .paragraph {
@@ -497,7 +496,7 @@
         line-height: 1.6 !important;
         text-align: center !important;
         width: 100% !important;
-        max-width: 320px !important; /* Prevents awkward text wrapping */
+        max-width: 320px !important; 
         margin: 0 auto !important;
         display: block !important;
     }
