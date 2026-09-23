@@ -319,42 +319,47 @@
         line-height: 1;
     }
 
-            /* ==================== Brand Start Here ==================== */
+    @media (max-width: 768px) {
+    #brand {
+        padding-bottom: 60px !important;
+    }
 
-#brand{
-    padding-bottom: 120px;
-    position: relative;
-    z-index: 555;
+    .brand_wrapper {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 60px !important; /* Forces a large vertical gap between each logo item */
+        padding: 50px 20px !important;
+        width: 100% !important;
+    }
+
+    .brand_item {
+        position: relative !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: none !important; /* Prevents desktop flex properties from restricting layout sizes */
+        text-align: center !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 0 auto !important;
+    }
+
+    .brand_item::after {
+        display: none !important; /* Ensures the desktop absolute blue dividing bars vanish entirely */
+        content: none !important;
+    }
+
+    .brand_item img {
+        display: block !important;
+        max-width: 180px !important; /* Restricts the logo width neatly inside mobile viewports */
+        width: auto !important;
+        height: auto !important;
+        margin: 0 auto !important;
+    }
 }
 
-.brand_wrapper{
-border: 3px solid #036E8A;
-border-radius: 15px;
-padding: 70px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
-.brand_item{
-    position: relative;
-    
-}
-.brand_item::after{
-    position: absolute;
-    content: "";
-    right: -63px;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 73px;
-    width: 3px;
-    background-color: #036E8A;
-    border-radius: 5px;
-}
-.brand_item:last-child::after{
-background: transparent;
-}
-
-/* ==================== Brand End Here ==================== */
 @media (max-width: 768px) {
     #review {
         padding-bottom: 60px;
