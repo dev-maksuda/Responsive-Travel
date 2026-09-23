@@ -336,31 +336,65 @@
         height: auto;
     }
 
+    
+@media (max-width: 768px) {
     #review {
-        padding: 50px 0;
+        padding-bottom: 60px;
     }
-    .review_heading .sec_title {
-        font-size: 32px;
-        text-align: center;
+
+    #review .sec_title {
+        font-size: 25px !important;
+        margin-bottom: 15px;
     }
-    .review_heading p {
-        font-size: 16px;
-        text-align: center;
+
+    .review_heading .review_heading {
+        font-size: 14px !important;
+        line-height: 1.4 !important;
+        padding: 0 10px;
     }
+
     .review_wrapper {
-        grid-template-columns: 1fr;
-        gap: 30px;
         margin-top: 40px;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 30px !important;
     }
+
     .review_item {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-        gap: 15px;
+        width: 100% !important;
+        max-width: 340px !important;
+        height: auto !important; /* Forces the fixed 400px height to break and scale dynamically */
+        padding: 30px 20px !important;
     }
-    .review_shape {
-        display: none;
+
+    .review_details {
+        margin-top: 15px;
     }
+
+    .review_details h4 {
+        font-size: 18px !important;
+        line-height: 1.2 !important;
+    }
+
+    .review_details h5 {
+        font-size: 14px !important;
+        line-height: 1.2 !important;
+        margin-top: 4px;
+    }
+
+    .review_rating {
+        margin: 10px 0 15px 0 !important;
+        gap: 4px;
+    }
+
+    .review_details .peragraph {
+        font-size: 16px !important; /* Keeps typography scaled down safely */
+        line-height: 1.0 !important; /* Resolves the compressed line-height property */
+        max-width: 100% !important;
+    }
+}
+
+
 
     #message {
         padding-bottom: 60px;
