@@ -319,24 +319,42 @@
         line-height: 1;
     }
 
-    #brand {
-        padding: 40px 0;
-    }
-    .brand_wrapper {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 30px;
-    }
-    .brand_item {
-        width: 40%;
-        text-align: center;
-    }
-    .brand_item img {
-        max-width: 120px;
-        height: auto;
-    }
+            /* ==================== Brand Start Here ==================== */
 
+#brand{
+    padding-bottom: 120px;
+    position: relative;
+    z-index: 555;
+}
+
+.brand_wrapper{
+border: 3px solid #036E8A;
+border-radius: 15px;
+padding: 70px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.brand_item{
+    position: relative;
     
+}
+.brand_item::after{
+    position: absolute;
+    content: "";
+    right: -63px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 73px;
+    width: 3px;
+    background-color: #036E8A;
+    border-radius: 5px;
+}
+.brand_item:last-child::after{
+background: transparent;
+}
+
+/* ==================== Brand End Here ==================== */
 @media (max-width: 768px) {
     #review {
         padding-bottom: 60px;
@@ -363,7 +381,7 @@
     .review_item {
         width: 100% !important;
         max-width: 340px !important;
-        height: auto !important; /* Forces the fixed 400px height to break and scale dynamically */
+        height: auto !important;
         padding: 30px 20px !important;
     }
 
@@ -388,13 +406,11 @@
     }
 
     .review_details .peragraph {
-        font-size: 16px !important; /* Keeps typography scaled down safely */
-        line-height: 1.0 !important; /* Resolves the compressed line-height property */
+        font-size: 16px !important; 
+        line-height: 1.0 !important;
         max-width: 100% !important;
     }
 }
-
-
 
     #message {
         padding-bottom: 60px;
