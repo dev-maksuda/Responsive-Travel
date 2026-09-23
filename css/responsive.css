@@ -329,7 +329,7 @@
         flex-direction: column !important;
         justify-content: center !important;
         align-items: center !important;
-        gap: 60px !important; /* Forces a large vertical gap between each logo item */
+        gap: 70px !important; 
         padding: 50px 20px !important;
         width: 100% !important;
     }
@@ -338,7 +338,7 @@
         position: relative !important;
         width: 100% !important;
         max-width: 100% !important;
-        flex: none !important; /* Prevents desktop flex properties from restricting layout sizes */
+        flex: none !important; 
         text-align: center !important;
         display: flex !important;
         justify-content: center !important;
@@ -347,13 +347,13 @@
     }
 
     .brand_item::after {
-        display: none !important; /* Ensures the desktop absolute blue dividing bars vanish entirely */
+        display: none !important; 
         content: none !important;
     }
 
     .brand_item img {
         display: block !important;
-        max-width: 180px !important; /* Restricts the logo width neatly inside mobile viewports */
+        max-width: 180px !important; 
         width: auto !important;
         height: auto !important;
         margin: 0 auto !important;
